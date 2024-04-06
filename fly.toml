@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for fly-vm on 2024-04-06T14:38:51+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'fly-vm'
+primary_region = 'cdg'
+
+[[services]]
+internal_port = 2222
+protocol = "tcp"
+auto_stop_machines = false
+auto_start_machines = false
+[[services.ports]]
+port = 22
+
+[[vm]]
+memory = '512mb'
+cpu_kind = 'shared'
+cpus = 1
